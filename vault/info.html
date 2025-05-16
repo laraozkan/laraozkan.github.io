@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vault — How It Works</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* Custom styles for the How It Works page */
+      .how-it-works-header {
+        background-color: #f9f9f9;
+        padding: 60px 0 30px;
+        text-align: center;
+        border-bottom: 1px solid #eee;
+      }
+
+      .how-it-works-header h1 {
+        font-size: 2.8rem;
+        font-weight: 800;
+        color: #075b5c;
+        margin-bottom: 20px;
+      }
+
+      .how-it-works-header p {
+        max-width: 600px;
+        margin: 0 auto;
+        font-size: 1.1rem;
+        color: #666;
+      }
+
+      .steps-container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 60px 2rem;
+      }
+
+      .step {
+        display: flex;
+        margin-bottom: 80px;
+        align-items: center;
+        position: relative;
+        transition: transform 0.3s ease;
+      }
+
+      /* Alternate layout for even steps */
+      .step:nth-child(even) {
+        flex-direction: row-reverse;
+      }
+
+      .step-number {
+        position: absolute;
+        top: -20px;
+        left: 0;
+        background-color: #075b5c;
+        color: white;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 1.2rem;
+        z-index: 2;
+      }
+
+      .step:nth-child(even) .step-number {
+        left: auto;
+        right: 0;
+      }
+
+      .step-content {
+        flex: 1;
+        padding: 30px;
+      }
+
+      .step-image {
+        flex: 1;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .step-image img {
+        width: 80%;
+        max-width: 400px;
+        border-radius: 10px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .step:hover .step-image img {
+        transform: scale(1.03);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+      }
+
+      .step h2 {
+        color: #075b5c;
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+        font-weight: 700;
+      }
+
+      .step p {
+        font-size: 1.05rem;
+        line-height: 1.6;
+        color: #555;
+      }
+
+      .cta-section {
+        background-color: #075b5c;
+        color: white;
+        text-align: center;
+        padding: 60px 20px;
+        margin-top: 20px;
+      }
+
+      .cta-section h2 {
+        font-size: 2.2rem;
+        margin-bottom: 20px;
+      }
+
+      .cta-button {
+        display: inline-block;
+        background-color: white;
+        color: #075b5c;
+        padding: 12px 30px;
+        margin-top: 20px;
+        border-radius: 30px;
+        font-weight: bold;
+        font-size: 1.1rem;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+      }
+
+      .cta-button:hover {
+        transform: translateY(-5px);
+        background-color: #f0f0f0;
+      }
+
+      /* Responsive styles */
+      @media (max-width: 768px) {
+        .step,
+        .step:nth-child(even) {
+          flex-direction: column;
+        }
+
+        .step-number {
+          left: 50%;
+          transform: translateX(-50%);
+        }
+
+        .step:nth-child(even) .step-number {
+          left: 50%;
+          right: auto;
+        }
+
+        .step-content,
+        .step-image {
+          width: 100%;
+        }
+
+        .how-it-works-header h1 {
+          font-size: 2.2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <a href="index.html">
+            <img src="vault-logo.png" alt="Vault Logo" style="height: 200px" />
+          </a>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="team.html">MEET THE TEAM</a></li>
+            <li><a href="download.html">DOWNLOAD VAULT</a></li>
+            <li><a href="info.html" class="active">HOW IT WORKS</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="how-it-works-header">
+      <div class="container">
+        <h1>How Vault Works</h1>
+        <p>
+          Discover how our app helps you track, share, and enjoy concerts with
+          friends through our intuitive features.
+        </p>
+      </div>
+    </section>
+
+    <div class="steps-container">
+      <div id="sign-in" class="step">
+        <div class="step-number">1</div>
+        <div class="step-image">
+          <img src="signin.png" alt="Sign In slide" />
+        </div>
+        <div class="step-content">
+          <h2>Create Your Account</h2>
+          <p>
+            Sign up with just a few taps using your email or social media
+            accounts. Customize your profile with your music preferences and
+            follow your favorite artists. Your secure account saves all your
+            concert memories and ticket purchases in one place.
+          </p>
+        </div>
+      </div>
+      <div id="ecommerce" class="step">
+        <div class="step-number">2</div>
+        <div class="step-image">
+          <img src="home.png" alt="Ecommerce slide" />
+        </div>
+        <div class="step-content">
+          <h2>Discover Music You Love</h2>
+          <p>
+            Browse upcoming concerts and featured artists in your area. Our
+            curated selection helps you find shows that match your music taste,
+            with personalized recommendations based on your listening history
+            and favorite artists.
+          </p>
+        </div>
+      </div>
+
+      <div id="booking" class="step">
+        <div class="step-number">3</div>
+        <div class="step-image">
+          <img src="Booking.png" alt="Booking slide" />
+        </div>
+        <div class="step-content">
+          <h2>Find Nearby Shows</h2>
+          <p>
+            Use our interactive map to discover concerts happening around you.
+            Filter by genre, date, and price range to find the perfect show. Our
+            location-based search helps you plan your concert calendar with
+            venue details and directions built right in.
+          </p>
+        </div>
+      </div>
+
+      <div id="dashboard" class="step">
+        <div class="step-number">4</div>
+        <div class="step-image">
+          <img src="Dashboard.png" alt="Dashboard slide" />
+        </div>
+        <div class="step-content">
+          <h2>Personal Concert Dashboard</h2>
+          <p>
+            Track your concert attendance history and upcoming shows all in one
+            place. View statistics about your music preferences, most visited
+            venues, and favorite artists. Your dashboard provides a visual
+            journey of your concert experiences over time.
+          </p>
+        </div>
+      </div>
+
+      <div id="social-feed" class="step">
+        <div class="step-number">5</div>
+        <div class="step-image">
+          <img src="Social feed.png" alt="Social Feed slide" />
+        </div>
+        <div class="step-content">
+          <h2>Share Your Experiences</h2>
+          <p>
+            Post photos, videos, and reviews from concerts you've attended. See
+            what shows your friends are attending and what they thought about
+            recent performances. Our social feed keeps you connected to the live
+            music community around you.
+          </p>
+        </div>
+      </div>
+
+      <div id="activities" class="step">
+        <div class="step-number">6</div>
+        <div class="step-image">
+          <img src="Activities.png" alt="Activities slide" />
+        </div>
+        <div class="step-content">
+          <h2>Stay Updated with Activities</h2>
+          <p>
+            Receive notifications about new concerts from your favorite artists,
+            price drops, and friend activities. Our app keeps you in the loop
+            about important concert information including venue changes,
+            cancellations, and weather alerts.
+          </p>
+        </div>
+      </div>
+
+      <div id="chat" class="step">
+        <div class="step-number">7</div>
+        <div class="step-image">
+          <img src="Chat.png" alt="Chat slide" />
+        </div>
+        <div class="step-content">
+          <h2>Plan Together</h2>
+          <p>
+            Use our built-in chat feature to coordinate concert plans with
+            friends. Create group conversations for specific shows, share ticket
+            information, and plan meet-up locations. Make concert-going a truly
+            social experience with real-time communication.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <section class="cta-section">
+      <div class="container">
+        <h2>Ready to start your concert journey?</h2>
+        <p>
+          Download Vault now and never miss another amazing live music
+          experience.
+        </p>
+        <a href="download.html" class="cta-button">Download Now</a>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="footer-logo">
+          <img src="/api/placeholder/100/40" alt="Vault Logo" />
+        </div>
+        <div class="footer-links">
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="social-links">
+          <a href="#"><img src="/api/placeholder/30/30" alt="Instagram" /></a>
+          <a href="#"><img src="/api/placeholder/30/30" alt="Twitter" /></a>
+          <a href="#"><img src="/api/placeholder/30/30" alt="Facebook" /></a>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2025 Vault. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
